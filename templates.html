@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <title>lance - view</title>
+    <link rel="stylesheet" href="/css/screen.css" media="screen,projection" type="text/css" />
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/options.js"></script>
+</head>
+<body ng-app="options">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Odesk
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><a href="#">dotNet <span class="label label-success pull-right">template_net</span></a></li>
+                                <li><strong>java</strong><span class="label label-default pull-right">template_java</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                Elance
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><a href="#">dotNet <span class="badge pull-right">template_net</span></a></li>
+                                <li><a href="#">java</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <h1>Template for ODesk java search</h1>
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Posts</th>
+                    <th>Auto post</th>
+                    <th>Template Name</th>
+                    <th>Controls</th>
+
+                </tr>
+                <tr>
+                    <td><input type="radio" name="tmp_select"></td>
+                    <td>1</td>
+                    <td><span class="label label-success">On</span></td>
+                    <td>template_net</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs">Copy</button>
+                            <button type="button" class="btn btn-default btn-xs">Edit</button>
+                            <button type="button" class="btn btn-default btn-xs">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="tmp_select" checked></td>
+                    <td>0</td>
+                    <td><span class="label label-default">Off</span></td>
+                    <td>template_java</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs">Copy</button>
+                            <button type="button" class="btn btn-default btn-xs">Edit</button>
+                            <button type="button" class="btn btn-default btn-xs">Delete</button>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

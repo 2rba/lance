@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <title>lance - view</title>
+    <link rel="stylesheet" href="/css/screen.css" media="screen,projection" type="text/css" />
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/options.js"></script>
+</head>
+<body ng-app="options">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                All
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><strong>all</strong><span class="badge pull-right">42</span></li>
+                                <li><a href="#">dotNet <span class="badge pull-right">42</span></a></li>
+                                <li>java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                ODesk
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><strong>all</strong><span class="badge pull-right">42</span></li>
+                                <li><a href="#">dotNet <span class="badge pull-right">42</span></a></li>
+                                <li>java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                Elance
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><strong>all</strong><span class="badge pull-right">42</span></li>
+                                <li><a href="#">dotNet <span class="badge pull-right">42</span></a></li>
+                                <li>java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-10">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default"><input type="checkbox"></button>
+                <button type="button" class="btn btn-default">Archive</button>
+                <button type="button" class="btn btn-default">UnRead</button>
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#">New</a></li>
+                <li><a href="#">Bidded</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">All</a></li>
+            </ul>
+            <table class="table results">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a href="#"><strong>Amazing C# Developer to Build Article Scraping Library - Established Software Company</strong></a></td>
+                    <td>1m ago</td>
+                    <td>
+                        <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-xs btn-default">archive</button>
+                        <button type="button" class="btn btn-xs btn-success">view</button>
+                        <button type="button" class="btn btn-xs btn-warning">bid</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a href="#">Required Experienced ASP. DOT NET Team</a></td>
+                    <td>29 Jul</td>
+                    <td>
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-xs btn-default">archive</button>
+                            <button type="button" class="btn btn-xs btn-success">view</button>
+                            <button type="button" class="btn btn-xs btn-warning">bid</button>
+                        </div>
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+<a href="/templates.html">сторінка темплейтів для постінгу</a>
+</body>
+</html>
