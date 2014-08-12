@@ -4,7 +4,6 @@
     <title>ODesk Watcher - Options</title>
     <link rel="stylesheet" href="css/screen.css" media="screen,projection" type="text/css" />
     <script src="/js/jquery-2.1.1.min.js"></script>
-    <script src="/js/angular.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
@@ -13,37 +12,36 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/options.js"></script>
 </head>
 <body ng-app="options">
 
 <div class="container">
-    <h1><span class="label label-default">ODesk</span></h1>
-    <div class="input-group">
-        <span class="input-group-addon">dotNet</span>
-        <input type="text" class="form-control" placeholder="Comma separates keys" value=".net windows">
-    <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">Change</button>
-    </span>
-    </div>
-<br>
-    <div class="input-group">
-    <span class="input-group-addon"></span>
-    <input type="text" class="form-control" placeholder="Comma separates keys">
-    <span class="input-group-btn">
-        <button class="btn btn-success " type="button">Add</button>
-    </span>
-</div>
-    <h1><span class="label label-default">Elance</span></h1>
-    <div class="input-group">
-        <span class="input-group-addon"></span>
-        <input type="text" class="form-control" placeholder="Comma separates keys">
-    <span class="input-group-btn">
-        <button class="btn btn-success " type="button">Add</button>
-    </span>
-    </div>
+    <ul class="list-unstyled config-ctrl" ng-controller="ConfigCtrl as config">
+        <li ng-repeat="site in config.sites">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>{{ site.name }}</strong></div>
+                <div class="panel-body">
+                    <ul class="list-unstyled">
+                    <li ng-repeat="(index, skeyObj) in site.keys" ng-controller="SearchKeyCtrl as skey" ng-include="'/options/skey.html'">
+                    </li>
+                    </ul>
+                    <div ng-include="'/options/skey.html'" ng-controller="SearchKeyCtrl as skey" ng-init="skey.new = true">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+
 </div>
 
 <a href="/view.html">сторінка перегляду jobs</a>
+
+
+    <script src="/js/angular.min.js"></script>
+<script src="/js/bower_components/angular-strap/dist/angular-strap.min.js"></script>
+<script src="/js/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <script src="/js/options.js"></script>
 </body>
 </html>
